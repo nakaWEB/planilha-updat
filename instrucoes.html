@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>instruçõe >.<</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-iconcat.png">
+  <link rel="icon" href="faviconcat.ico" type="image/x-icon"> 
+  <link rel="stylesheet" href="./stylegeral.css">
+  <style>
+        body {
+          background: #494949;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .barra-transição {
+          background: #ffeaa7;
+          height: 100%;
+          width: 0%;
+          position: fixed;
+          top: 0;
+          left: 0;
+          animation: transição 2.8s linear;
+        }
+
+        @keyframes transição {
+          0% {
+            width: 100%;
+          }
+
+          50% {
+            width: 100%;
+          }
+
+          100% {
+            width: 0%;
+          }
+        }
+
+        /*gato 1*/
+        .cat {
+          opacity: 0%;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 200px;
+          color: #000000;
+          letter-spacing: 0;
+          animation: opacidade 3.5s linear;
+        }
+
+        @keyframes opacidade {
+          0% {
+            opacity: 100%;
+          }
+
+          96% {
+            opacity: 100%;
+          }
+
+          100% {
+            opacity: 0%;
+          }
+        }
+
+        /* envolve apenas o caractere “<” */
+        .blink {
+          display: inline-block;
+          animation: pisca 1.4s linear;
+        }
+
+        @keyframes pisca {
+
+          0%,
+          85%,
+          100% {
+            transform: scaleY(1);
+          }
+
+          90% {
+            transform: scaleY(0.1);
+          }
+        }
+
+        /*gato 2*/
+        .cat2 {
+          opacity: 100%;
+          position: fixed;
+          top: 13%;
+          left: 10%;
+          transform: translate(-50%, -50%);
+          font-size: 100px;
+          color: #ffffff;
+          letter-spacing: 0;
+          animation: opacidade2 3.5s linear;
+        }
+
+        @keyframes opacidade2 {
+          0% {
+            opacity: 0%;
+          }
+
+          96% {
+            opacity: 0%;
+          }
+
+          100% {
+            opacity: 100%;
+          }
+        }
+
+        /* envolve apenas o caractere “<” */
+        .blink2 {
+          display: inline-block;
+          animation: pisca2 5s infinite;
+        }
+
+        @keyframes pisca2 {
+
+          0%,
+          94%,
+          100% {
+            transform: scaleY(1);
+          }
+
+          97% {
+            transform: scaleY(0.1);
+          }
+        }
+
+        /* >.< PAINEL*/
+.painel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: #000000ab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1%;
+  box-sizing: border-box;
+  animation: painel 3s linear;
+}
+
+@keyframes painel {
+  0% {
+    opacity: 0%;
+  }
+  99% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.logo {
+      position: relative;
+  left: 0%;
+  top: 50%;
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.painel a {
+    position: relative;
+  left: 0%;
+  top: -1%;
+    margin-bottom: 30px;
+  background-color: #c9c9c900;
+  width: 35%;
+  height: 5px;
+}
+
+.barralg {
+  position: relative;
+  top: 14%;
+  width: 97%;
+  height: 5px;
+  background: white;
+  margin-bottom: 15px;
+}
+
+.barralg2 {
+  position: relative;
+  top: 15%;
+  width: 97%;
+  height: 5px;
+  background: white;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Caixa que conterá os botões com rolagem */
+.caixa-botoes {
+  position: relative;
+  top: 14%;
+  width: 90%;
+  height: 65%; /* define a altura da área de rolagem */
+  overflow-y: auto; /* adiciona a rolagem vertical */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  /* opcional: estilo de barra de rolagem */
+  scrollbar-width: thin;
+  scrollbar-color: #ffeaa7 #000000ab;
+}
+
+/* Para Chrome / Edge / Safari */
+.caixa-botoes::-webkit-scrollbar {
+  width: 8px;
+}
+.caixa-botoes::-webkit-scrollbar-thumb {
+  background-color: #ffeaa7;
+  border-radius: 4px;
+}
+.caixa-botoes::-webkit-scrollbar-track {
+  background: #0000005b;
+}
+
+.painel button {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 50px;
+  background-color: #e4e4e4;
+  color: #000000;
+  transition: 0.3s ease;
+}
+
+.painel button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+  background-color: #c9c9c9;
+}
+
+.body {
+  position: absolute;
+  top: 0px;
+  left: 20%;
+  width: 80%;
+  height: 200%;
+}
+
+.body div h3,h2 {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.body .titulo {
+  position: relative;
+  top: 5%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+}
+
+.body div h4 {
+  padding: 20px;   
+  color: white;
+}
+    
+.body .titulosetextos {
+  position: relative;
+  top: 7%;
+}
+      </style>
+</head>
+
+<body>
+
+
+  
+  <div class="cat2">&gt;.<span class="blink2">&lt;</span></div>
+
+<div class="painel">
+  <a href="./index.html">
+  <img class="logo" src="./LOGO AS INFO SITE.jpg" alt="Logo">
+  </a>  <div class="barralg"></div>
+  <div class="barralg2"></div>
+
+  <!-- 🔹 Caixa com rolagem própria -->
+  <div class="caixa-botoes">
+    <button class="Produtos">Produtos</button>
+    <button class="AdicionarProduto">Adicionar Produto</button>
+    <button class="ADProdutoPorCodigo">Adicionar Produto Por Codigo</button>
+    <button class="csvbtn">CSV</button>
+    <button class="importarcsv">Importar CSV</button>
+    <button class="exportarcsv">Exportar CSV</button>
+    <button class="resetarprodutos">Resetar Produtos</button>
+    <button class="pesquisarproduto">Pesquisar Produto</button>
+    <button class="salvareexportar">Salvar e Importar</button>
+    <button class="salvar">Salvar</button>
+    <button class="importar">Importar</button>
+    <button class="imprimir">Imprimir</button>
+    <button class="flutuantes">Flutuantes</button>
+    <button class="contas">Calculos</button>
+  </div>
+</div>
+
+
+  <div class="body">
+    <div class="titulo">INSTRUÇÕES PLANILHA DE ORÇAMENTO</div>
+
+    <div class="titulosetextos">
+    <div id="produtostxt" class="produtostxt"><h2>PRODUTOS</h2></div>
+
+    <div id="adprodutostxt" class="adprodutostxt"><h3>ADICIONAR PRODUTOS</h3></div>
+    <h4>
+      "ADICIONAR PRODUTOS" serve para adicionar produtos temporarios que serão usados apenas uma vez, se a pagina for atualizada eles sumirar a menos que tenhão sidos exprotados em uma planilha o que faz com que voltem caso o orçamento salvo for improtado. para adicionar um produto temporario ser nesseçario colocar: 
+      </p> Código (não e 100% nesseçario apenas que sejá com uma conta que envou outro produto exemplo "(((C[429] + A[429])*2 + (C[534] + A[534])*2) * 4) * Q * $" que e necessário o codigo do produto para puchar os valores),
+      </P> Nome (não e necessário um nome especifico pores e preciso colocar para evitar confusão)
+      </p> Categoria (coloque em qual caategoria o produto sera colocado ele sera adicionado ao final desta pagina),
+      </p> Preço (preço que sera dado a o produto), Unidade: "UNID" "L" "ML" etc., Fórmula Use: Q=Quantidade, $=Preço, C=Comprimento, A=Largura
+    </h4>
+
+    <div id="ADProdutoPorCodigotxt" class="ADProdutoPorCodigotxt"><h3>ADICIONAR PRODUTO POR CODIGO</h3></div>
+      <h4>
+      adicionar produto por codigo só pode ser usado quando a intenção for adicionar um produto fixo porem ele e adico nado diretanente no codigo javaScript da pagina (porem não e recomendado) caso queira arriscar basta ir para este link <a href="https://www.google.com/search?q=vendo+pan+meme&oq=vendo+pan+meme&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIKCAEQABgTGBYYHjIHCAIQABjvBTIKCAMQABiABBiiBDIHCAQQABjvBdIBCDYxODlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer">GitHub</a> onde sera direcionado a pagina onde podera editar este site completo.
+  <span id="dots">...</span>
+  <span id="mais" style="display:none;">
+    não modifique o que não for necessario sujeito a paulada 
+    <img src="./emoji.png" alt="ícone" width="16" height="16" style="vertical-align:middle;">
+  </span>
+<button id="verMaisBtn" type="button" onclick="verMais()">Ver mais</button>
+</h4>
+
+    <div id="csvtxt" class="CSVtxt"><h2>CSV</h2></div>
+    <h4>
+      "CSV" O CSV e uma planilha com as informações dos predutos a o criar uma planilha como essa com os produtos na sequencia (codigo,"nome",preço,"formula","unidade","pagina") você tera um CSV e quando importalo tera uma planlha toda customisada com os produtos descritos OBS.: o CSV não altera e nem cria paginas ele apenas adiciona produtos a elas
+    </h4>
+
+    <div id="importarcsvtxt" class="importarcsvtxt"><h3>INPORTAR CSV</h3></div>
+    <h4>
+      "importar CSV" Importar o CSV e facio porem deve se sertificar de que o csv esta correto (e recomendado que importe o CSV original da pagina e useo como base)
+    </h4>
+
+    <div id="exportarcsvtxt" class="exportarcsvtxt"><h3>EXPORTAR CSV</h3></div>
+    <h4>
+    Criar um CSV do zero não e uma escolha 100% pratica porem se você apenas busca uma forma de adicionar um produto a o CSV original basta adiicionar um produto temporario e logo apos exportar o CSV que o produto temporario estara catalogado emtão sempre que precisar deste produto basta importar novamente o CSV. </p>OBS.: a o importar um CSV a pagina e carregada sertifiquese de importar o CSV antes de importar o CSV.
+    </h4>
+
+    <div id="resetarprodutostxt" class="resetarprodutostxt"><h3>RESETAR PRODUTOS</h3></div>
+    <h4>
+      "RESETAR PRODUTOS" este botão serve para resetar todos os dados o produtos temporarios da pagina porem para evitar dores de cabeça apos apertado aparecera uma notificação para confirmar o resete da pagina (o mesmo não vale para o "resetar esta pagina" disponivel no crome nem mesmo para o ctrl+R)
+    </h4>
+
+    <div id="pesquisartxt" class="pesquisartxt"><h3>PESQUISAR PRODUTOS</h3></div>
+    <h4>
+      A melhor forma de procurar um produto e pela barra de pesquisa porem lembreçe de limpar a barra de pesquisa para que os demais produtos voltem para suas paginas (OBS.: o filtro de pagina não funciona porem da ´para filtrar por pagina digitando o nome e depois clicando na pagina da barra inferior que você deseja filtrar. o filtro continua aparecendo por poblemas internos)
+    </h4>
+
+    <div id="salvareexportartxt" class="salvareexportartxt"><h2>SALVAR/IMPORTAR</h2></div>
+
+    <div id="salvartxt" class="salvartxt"><h3>SALVAR</h3></div>
+      <h4>
+        para salvar basta clicla no botão com um icone de arquivo que sera redirecionado para o explorador de arquivos onde devera selecionar a pagina onde devera salvar o orçamento (Preferencialmente na pasta do cliente) 
+      </h4>
+
+    <div id="importartxt" class="importartxt"><h3>IMPORTAR</h3></div>
+      <h4>
+        Caso seja necessário editar um orçamento basta abrir o site e clicar no botâo com um icone de pasta onde sera redirecionado para o explorador de arquivos onde ira escolher o orçamento a ser editado (arquivos em .xlsx sam importados porem se não tiverem editados exatamente como um que foi exportado pelo site pode ocorrer erros. e recomendado atualizar a pagina caso abra um arquivo que não foi feito pelo site)
+      </h4>
+      
+
+    <div id="imprimirtxt" class="imprimirtxt"><h3>IMPPRIMIR</h3></div>
+      <h4>
+        A o imprimir esteja siente de que a impreção não salva o arquivo apenas baixa o orquivo na pasta download não no servidor (para salvar no servidor use o botão salvar) 
+      </h4>
+
+    <div id="flutuantestxt" class="flutuantestxt"><h2>FLUTUANTES</h2> </div>   
+      <h4>
+        As flutuantes são as caixas atualmente vermelhas onde fica notificações sobre produtos e propriedades de salvamento elas ficam localizadas na barra superior
+      </h4>
+    </div>
+
+    <div id="calculo"><h2>CALCULOS</h2>
+      <h4>
+        Alguns calculos dependen de valoraes de outros produtos como: "MADEIRA PARA BANNER" depende esclusivamente do comprimento da lona impresa assim como outros produtos tem essas propriedades</p>Esse tipo de conta e feita usando a conta EX: Q[codigo do produto] * A * $. isso seria a quantidade (Q) que foi colocada no produto a qual o codigo pertense vesez a a largura (A) vezez o valor basa ($)
+      </h4>
+    </div>
+
+  </div>
+
+  <div class="barra-transição"></div>
+
+  <div class="cat">&gt;.<span class="blink">&lt;</span></div>
+  
+<script>
+  // Mapeia os botões para os IDs dos títulos
+  const links = {
+    "Produtos": "produtostxt",
+    "Adicionar Produto": "adprodutostxt",
+    "Adicionar Produto Por Codigo": "ADProdutoPorCodigotxt",
+    "CSV": "csvtxt",
+    "Importar CSV": "importarcsvtxt",
+    "Exportar CSV": "exportarcsvtxt",
+    "Resetar Produtos": "resetarprodutostxt",
+    "Pesquisar Produto": "pesquisartxt",
+    "Salvar e Importar": "salvareexportartxt",
+    "Salvar": "salvartxt",
+    "Importar": "importartxt",
+    "Imprimir": "imprimirtxt",
+    "Flutuantes": "flutuantestxt",
+    "Calculos": "calculos"
+  };
+
+  document.querySelectorAll(".caixa-botoes button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const alvo = links[btn.textContent.trim()];
+      if (alvo) {
+        document.getElementById(alvo).scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    });
+  });
+
+
+function verMais() {
+  const mais = document.getElementById("mais");
+  const dots = document.getElementById("dots");
+  const btn = document.getElementById("verMaisBtn");
+
+  if (mais.style.display === "none") {
+    mais.style.display = "inline";
+    dots.style.display = "none";
+    btn.textContent = "Ver menos";
+  } else {
+    mais.style.display = "none";
+    dots.style.display = "inline";
+    btn.textContent = "Ver mais";
+  }
+}
+
+
+</script>
+
+</body>
+
+
+</html>

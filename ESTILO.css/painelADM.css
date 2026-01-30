@@ -1,0 +1,123 @@
+        :root {
+            --fundo: rgba(255, 255, 255, 0.315);
+            --escrita: black;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --borda: 1px solid rgb(218, 218, 218);
+            --botãofundo: rgba(255, 255, 255, 0.479);
+        }
+
+        /* >.< PANEL ADMIN*/
+        .admin-panel {
+            position: fixed;
+            left: 0;
+            top: 8%;
+            width: 17%;
+            height: 92%;
+            background: var(--fundo);
+            backdrop-filter: blur(2px);
+            color: #b4b4b4;
+            border: var(--borda);
+            padding: 10px;
+            z-index: 1001;
+
+            overflow-y: auto;
+            transition: var(--transition);
+        }
+
+        /*logo painel admin*/
+        .admin-panel h4 {
+            margin: 0 0 10px 0;
+            color: var(--escrita);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .admin-panel button {
+            width: 100%;
+            margin: 4px 0;
+            padding: 12px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--botãofundo);
+            justify-content: center;
+        }
+
+        .admin-panel button:hover {
+            transform: translateY(-2px);
+        }
+
+        /*botoes salvar e carregar*/
+        .gridbtnSeC {
+            position: relative;
+            top: -4%;
+            transform: translate(0%, 50%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+        #btnSeC {
+            width: 48%;
+            height: min-content;
+            padding: 7px;
+            margin: 2px;
+        }
+
+
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 999;
+        }
+
+        .action-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: var(--escrita);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .action-button:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* >.< IMPUTS PAINEL ADMIN*/
+        .admin-panel input,
+        .admin-panel select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            font-size: 13px;
+            transition: var(--transition);
+            background: var(--light-color);
+        }
+
+        .admin-panel input:focus,
+        .admin-panel select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        }

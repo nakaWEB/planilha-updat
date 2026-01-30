@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleINDEX.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+ 
+</head>
+
+<body>
+    <section class="hero" id="home">
+        <video class="hero-video" autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2019/08/13/26011-353916142_large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>AS INFORMATICA</h1>
+            <p>Planilhas de Orçamentos</p>
+        </div>
+    </section>
+
+    </div>
+    <nav id="navBar-orç" class="navBar-orç">
+        <div class="nav-orç-container">     
+        <ul class="nav-orç-menu">
+           <li><a href="./placas-fachadas.html">PLACAS/FACHADAS</a></li>
+           <li><a href="./planilhatoldo.html">TOLDOS</a></li>
+           <li><a href="./atendimento.html">ATENDIMENTO</a></li>
+           <li><a href="./orcamentos.html">OÇAMENTOS</a></li>
+           <li><a href="./admin.html">ADMIN</a></li>
+        </ul>   
+        </div>
+    </nav>
+
+        <footer id="contact">
+        <p>AS INFORMATICA &copy; 2015-2026</p>
+    </footer>
+
+        <audio id="meuAudio" autoplay>
+        <source src="rainy-lofi-city-lofi-music-332746.mp3" type="audio/mpeg">
+    </audio>
+
+        <nav id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="logo">AS INFORMATICA</a>
+            <ul class="nav-menu">
+                <li><a href="#home"></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+// Verifica se é ADM e mostra o botão de admin
+function verificarEAdicionarBotaoAdmin() {
+    const session = localStorage.getItem('sessionASInfo');
+    if (session) {
+        try {
+            const parsed = JSON.parse(session);
+            if (parsed.tipo === 'ADM') {
+                // Adiciona botão de admin na navbar
+                const navMenu = document.querySelector('.nav-orç-menu');
+                if (navMenu && !document.querySelector('a[href="./admin.html"]')) {
+                    const adminLi = document.createElement('li');
+                    adminLi.innerHTML = '<a href="./admin.html">ADMIN</a>';
+                    navMenu.appendChild(adminLi);
+                }
+            }
+        } catch (e) {
+            console.warn('Sessão inválida');
+        }
+    }
+}
+
+// Executa ao carregar a página
+document.addEventListener('DOMContentLoaded', verificarEAdicionarBotaoAdmin);
+</script>
+</body>
+
+</html>
